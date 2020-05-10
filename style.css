@@ -9,7 +9,6 @@ body div {
 }
 #header {
     height: 200px;
-    background-color: red;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -23,10 +22,6 @@ body div {
 #header img {
     width: 100%;
 }
-/* CAN BE ERASED */
-#navigationBar {
-    background-color: green;
-}
 #navigationBarList {
     list-style-type: none;
     display: flex;
@@ -38,7 +33,6 @@ body div {
 }
 #navigationBarList li {
     overflow: hidden;
-    float: left;
 }
 #navigationBarList li a {
     display: block;
@@ -49,31 +43,35 @@ body div {
     background-color: white;
     text-decoration: none;
 }
+#navigationBarList li a:hover {
+    background-color: red;
+    transition: background-color 0.5s ease;
+
+}
 .dropdownContent {
-    display: none;
-    /* visibility: hidden; */
     position: absolute;
+    padding: 0;
+    display: none;
+    overflow: hidden;
     width: inherit;
     min-width: 150px;
 }
-.showOptions {
-    display: block;
-    /* visibility: visible;
-    transition: visible 2s; */
-    /* transition-duration: 2s; */
-    /* transition-timing-function: ease-in-out; */
-}
-#contentContainer {
+.mainContainer {
     display: flex;
     height: 100%;
     background-color: white;
 }
-#asideImg {
+.mainImage {
     width: 30%;
+    min-width: 200px;
     height: 100%;
     background-color: purple;
 }
-#mainContent {
+.mainImagePicture {
+    min-width: inherit;
+
+}
+.mainContent {
     width: 70%;
     height: 100%;
     background-color: violet;

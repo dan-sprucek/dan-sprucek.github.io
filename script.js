@@ -1,11 +1,3 @@
-$("a").mouseover(function(){
-    $(this).siblings().addClass("showOptions")
-});
-
-// $("a").mouseout(function(){
-//     $(this).siblings().removeClass("showOptions")
-// });
-
-$("li").mouseout(function(){
-    $(this).children().removeClass("showOptions")
+$("#navigationBarList li").hover(function(){
+    $(this).children("ul").stop(true, false, true).slideToggle(300)
 });
