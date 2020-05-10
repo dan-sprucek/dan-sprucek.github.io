@@ -1,3 +1,94 @@
-h1 {
-    color: red;
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: blue;
+}
+body div {
+    width: 100%;
+}
+#header {
+    height: 200px;
+    background-color: red;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+#header div {
+    position: absolute;
+    bottom: 30px;
+    color: white;
+    font-size: 40px;
+}
+#header img {
+    width: 100%;
+}
+/* CAN BE ERASED */
+#navigationBar {
+    background-color: green;
+}
+#navigationBarList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+#navigationBarList li {
+    overflow: hidden;
+    float: left;
+}
+#navigationBarList li a {
+    display: block;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-right: 1px solid black;
+    background-color: white;
+    text-decoration: none;
+}
+.dropdownContent {
+    display: none;
+    /* visibility: hidden; */
+    position: absolute;
+    width: inherit;
+    min-width: 150px;
+}
+.showOptions {
+    display: block;
+    /* visibility: visible;
+    transition: visible 2s; */
+    /* transition-duration: 2s; */
+    /* transition-timing-function: ease-in-out; */
+}
+#contentContainer {
+    display: flex;
+    height: 100%;
+    background-color: white;
+}
+#asideImg {
+    width: 30%;
+    height: 100%;
+    background-color: purple;
+}
+#mainContent {
+    width: 70%;
+    height: 100%;
+    background-color: violet;
+}
+#contactSide {
+    position: fixed;
+    right: 0;
+    bottom: 25%;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+#contactSide a img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
 }

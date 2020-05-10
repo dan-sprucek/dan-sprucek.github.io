@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test site</title>
+    <!-- TITLE OF THE SITE -->
+    <title>Dan's Website</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
-   <h1>Test</h1> 
+    <!-- HEADER IMAGE + INTRODUCTION -->
+   <div id="header"><img src="https://www.publicdomainpictures.net/pictures/280000/velka/dark-blue-glitter-background.jpg"><div>Hi! My name is Dan.</div>
+   </div>
+   <!-- NAVIGATION BAR -->
+   <div id="navigationBar">
+        <ul id="navigationBarList">
+            <li><a class="dropdown" href="#">ABOUT ME</a>
+                <div class="dropdownContent">
+                    <a href="#">Download CV</a>
+                    <a href="#">Work Experience</a>
+                </div>
+            </li>
+            <li><a class="dropdown" href="#">PROGRAMS</a>
+                <div class="dropdownContent">
+                    <a href="#">Cube</a>
+                    <a href="#">Random Selector</a>
+                </div>
+            </li>
+            <li><a class="dropdown" href="#">HOBBIES</a>
+                <div class="dropdownContent">
+                    <a href="#">Sport</a>
+                </div>
+            </li>
+            <li><a class="dropdown" href="#">CONTACT</a></li>
+        </ul>     
+   </div>
+   <!-- MAIN CONTENT (IMAGE + CONTENT) -->
+   <div id="contentContainer">
+        <div id="asideImg">
+        </div>
+        <div id="mainContent">
+        </div>
+   </div>
+   <!-- CONTACT INFORMATION -->
+   <div id="contactSide">
+        <a href="mailto:dan.sprucek@gmail.com"><img src="https://cdn0.iconfinder.com/data/icons/lumin-social-media-icons/512/Gmail-512.png" alt="gmail"></a>
+        <a href="https://www.linkedin.com/in/dan-%C5%A1pru%C4%8Dek-40004b8b/"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/linkedin-512.png" alt="linkedin"></a>
+        <a href="https://www.facebook.com/dan.sprucek"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="facebook"></a>
+   </div>
+   <!-- SCRIPT ACTIVATED -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
