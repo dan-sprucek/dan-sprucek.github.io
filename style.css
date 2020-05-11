@@ -3,7 +3,6 @@ body, html {
     height: 100%;
     width: 100%;
     margin: 0;
-    /* background-color: black; */
 }
 body div {
     width: 100%;
@@ -120,4 +119,26 @@ h1 {
     width: 30px;
     height: auto;
     margin-right: 10px;
+}
+/* MAIN CONTENT SECTIONS */
+/* DOWNLOAD CV */
+/* #selectCV {
+    display: flex;
+    width: 
+} */
+#selectCV{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+#selectCV div {
+    width: 49%;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid black;
+}
+.CVselected {
+    background-color: lightseagreen;
 }
