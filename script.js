@@ -1,3 +1,9 @@
+// PRE-DEFINED FUNCTIONS
+// CLICK TO GET TO ANTOHER TAB
+function test(parameter){
+    $(parameter).trigger("click");
+};
+
 // NAVBAR FIRST OPTION LEFT BORDER
 $("#navigationBarList li a").first().css("border-left", "1px solid white");
 
@@ -15,20 +21,20 @@ $("#navigationBarList li").hover(function(){
     $(this).children("ul").stop(true, false, true).slideToggle(300)
 });
 
-// FIRST TAB SHOWS ON LOAD
+// FIRST TAB SHOWS ON LOAD AND HIGHLIGHTS NAVBAR
 $(".mainContainer").first().addClass("active");
+$("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
 
 // CLICKING NAVIGATION OPTIONS
 $("#navigationBarList li a").on("click", function(){
     $(".mainContainer").removeClass("active");
-    // FIGURE OUT WHY INSTEAD OF eq($("#navigationBarList li a").index(this)) THIS CANNOT BE USED eq($(this).index())
+    $("#navigationBarList li a").removeClass("activeTab");
     $(".mainContainer").eq($("#navigationBarList li a").index(this)).addClass("active");
+    $("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
 });
 
 // DOWNLOAD CV DEFAULT SELECTOR
 $("#selectCV div").filter(":eq(0), :eq(2)").addClass("CVselected");
-
-
 
 // DOWNLOAD CV SELECT
 // DOESN'T MAKE SENSE WHY THIS DOES NOT WORK :()
@@ -71,4 +77,12 @@ $("#selectCV div").on("click", function(){
     }
 });
 
-// SOLVE MARGIN WHEN SCREEN IS SMALLER
+// WORK EXPERIENCE LINK TO CV
+$("#linkDownloadCV").on("click", function(){
+    test("#downloadCV");
+});
+
+// WORK EXPERIENCE TOGGLE SHOW JOB
+$("#listOfJobs li").on("click", function(){
+    $(this).nextUntil("li").slideToggle(400);
+});

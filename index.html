@@ -16,31 +16,31 @@
         <span id="currentlyLearning"><i>"Currently learning: reactJS"</i></span>
         <span id="randomQuote"><i><q>It's never too late to shine.</q></i></span>    
         <ul id="navigationBarList">
-            <li><a href="#">ABOUT ME</a>
+            <li><a id="aboutMe" id="test" href="#">ABOUT ME</a>
                 <ul class="dropdownContent">
-                    <li><a href="#">Download CV</a></li>
-                    <li><a href="#">Work Experience</a></li>
+                    <li><a id="downloadCV" href="#">Download CV</a></li>
+                    <li><a id="workExperience" href="#">Work Experience</a></li>
                 </ul>
             </li>
-            <li><a href="#">PROGRAMS</a>
+            <li><a id="programs" href="#">PROGRAMS</a>
                 <ul class="dropdownContent">
-                    <li><a href="#">Cube</a></li>
-                    <li><a href="#">Random Selector</a></li>
+                    <li><a id="cube" href="#">Cube</a></li>
+                    <li><a id="randomSelector" href="#">Random Selector</a></li>
                 </ul>
             </li>
-            <li><a href="#">HOBBIES</a>
+            <li><a id="hobbies" href="#">HOBBIES</a>
                 <ul class="dropdownContent">
-                    <li><a href="#">Sport</a></li>
+                    <li><a id="sport" href="#">Sport</a></li>
                 </ul>
             </li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a id="contact" href="#">CONTACT</a></li>
         </ul> 
-   </div>
+   </div>       
    <!-- MAIN CONTENT (IMAGE + CONTENT) -->
          <!-- ABOUT ME -->
-   <div class="mainContainer" id="aboutMe">
+   <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile">
         </div>
         <div class="mainContent">
             <h1>About Me</h1>
@@ -49,9 +49,9 @@
         </div>
    </div>
          <!-- DOWNLOAD CV -->
-   <div class="mainContainer" id="downloadCV">
+   <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://www.picserver.org/highway-signs2/images/curriculum-vitae.jpg" alt="CV picture">
+            <img src="https://www.picserver.org/highway-signs2/images/curriculum-vitae.jpg" alt="CV">
         </div>
         <div class="mainContent">
             <h1>Download CV</h1>
@@ -66,19 +66,38 @@
         </div>
     </div>
          <!-- WORK EXPERIENCE -->
-   <div class="mainContainer" id="workExperience">
+   <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://www.thebluediamondgallery.com/handwriting/images/experience.jpg" alt="Work Experience">
         </div>
         <div class="mainContent">
             <h1>Work Experience</h1>
-            <p>This is my work experience</p>
+            <p>For my Work Experience in brief, please <span id="linkDownloadCV">see my CV</span>.</p>
+            <p>Otherwise, here is my full description of the work I did since my University studies:</p>
+            <ul id="listOfJobs">
+                <li>CZECH-IN (2012-2015)</li>
+                <p>Back when I was in University finishing last year of my studies a friend of mine asked me if I was interested in a temp job. The whole work wasn't hard, simply filling out Visa applications and delivering them to the Alien Police. After a month they asked me if I would like to work for them full-time in Registration department. Since I've always had a good grasp of working with computers and programs it was a perfect match for me at that time. Mainly the job consisted of processing participants' registrations to various Conferences and Congresses, accommodation and subsequently being on-site. We used variety of programs such as <em>cmOffice</em>, <em>Eventsforce</em> or <em>Pohoda</em>. Over time I became a Deputy of the department.</p>
+                <p>Highlight of my work was however another part of the job and that was managing transportation during one of the biggest Conferences that took place in Prague. There were over 5.000 participants, the event lasted for a whole week and it was just myself. Hundreds of transports including individual pendling from and to the airport/venue/hotel, buses to social gatherings and nearby cities (where I had to be present to organize the boarding) and last but not least high profile transport for the Board of the Association. It was a 4am - 1am job for 7 days straight but in the end it was a huge success.</p>
+                <p>After my studies were over, I decided to work abroad. Via one of the contacts I gathered during working for CZECH-IN I secured a voluntary job as Administrator for <abbr title="International Conferedation of Midwives">ICM</abbr> in The Hague, Netherlands.</p>
+                <li>ASTRIUM (NETHERLANDS) (2015)</li>
+                <p>I started my Netherlands experience as a voluntary Administrator for a non-profit organization <abbr title="International Conferedation of Midwives">ICM</abbr>.After 2 weeks I secured a job interview for Astrium company as a Billing Assistant. This company was a major accountant for call and broadband services used on the sea by both big companies such as Maersk and private ships. My role was helping other colleagues - Accountants - with minor tasks at first.</p>
+                <p>However, they soon realized I can handle quite an amount of work in a short time and I don't make mistakes, so they gave me a search-and-charge job supporting all the Accountants. This job consisted of searching for unbilled services, finding the right account and charge them. Sometimes these amounts were quite low like a few pounds, but summed up there were thousands of pounds every month that would otherwise be forgotten.</p>
+                <p>Living in The Hague was great and if I will ever decide to retire in another country than Czech Republic, I believe Netherlands will be amongst my top choices. At the end of the year 2015 I had personal reasons to go back to Czech Republic however and although Astrium offered me a job as a full Accountant, I had to decline.</p>
+                <li>WUNDERMAN (2015-2016)</li>
+                <p>ladida</p>
+                <li>APARTHOTEL ADAGIO (UK) (2016-2017)</li>
+                <p>ladida2</p>
+                <li>WUNDERMAN THOMPSON (2017-2020)</li>
+                <p>ladida</p>
+                <li>SELF-EDUCATION (2020-present)</li>
+                <p>ladida2</p>
+            </ul>
         </div>
     </div>
         <!-- PROGRAMS -->
-        <div class="mainContainer" id="programs">
+        <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Programs">
         </div>
         <div class="mainContent">
             <h1>Programs</h1>
@@ -87,9 +106,9 @@
         </div>
     </div>
         <!-- CUBE -->
-    <div class="mainContainer" id="cube">
+    <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Cube">
         </div>
         <div class="mainContent">
             <h1>Cube</h1>
@@ -98,9 +117,9 @@
         </div>
     </div>
         <!-- RANDOM SELECTOR -->
-    <div class="mainContainer" id="randomSelector">
+    <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Random">
         </div>
         <div class="mainContent">
             <h1>Random Selector</h1>
@@ -108,9 +127,9 @@
         </div>
     </div>
         <!-- HOBBIES -->
-        <div class="mainContainer" id="hobbies">
+        <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Hobbies">
         </div>
         <div class="mainContent">
             <h1>Hobbies</h1>
@@ -119,9 +138,9 @@
         </div>
     </div>
         <!-- SPORT -->
-    <div class="mainContainer" id="sport">
+    <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Sport">
         </div>
         <div class="mainContent">
             <h1>Sport</h1>
@@ -130,19 +149,34 @@
         </div>
     </div>
         <!-- CONTACT -->
-    <div class="mainContainer" id="contact">
+    <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile picture">
+            <img src="https://www.thebluediamondgallery.com/typewriter/images/contact.jpg" alt="Contact">
         </div>
         <div class="mainContent">
             <h1>Contact</h1>
-            <p>This is my work experience</p>
+            <p>There are number of ways to reach me, feel free to use any of them :)</p>
+            <table>
+                <tr>
+                    <td>E-mail</td>
+                    <td>dan.sprucek@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Skype</td>
+                    <td>dan.sprucek</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td><a href="https://www.linkedin.com/in/dan-%C5%A1pru%C4%8Dek-40004b8b/">https://www.linkedin.com/in/dan-špruček-40004b8b/</a></td>
+                </tr>
+            </table>
         </div>
     </div>
    <!-- CONTACT ON THE SIDE INFORMATION -->
    <div id="contactSide">
         <a href="mailto:dan.sprucek@gmail.com"><img src="https://cdn0.iconfinder.com/data/icons/lumin-social-media-icons/512/Gmail-512.png" alt="gmail"></a>
         <a href="https://www.linkedin.com/in/dan-%C5%A1pru%C4%8Dek-40004b8b/"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/linkedin-512.png" alt="linkedin"></a>
+        <a href="https://join.skype.com/invite/ASAEgX6r07nq"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Skype-512.png" alt="skype"></a>       
         <a href="https://www.facebook.com/dan.sprucek"><img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="facebook"></a>
    </div>
    <!-- SCRIPT ACTIVATED -->
