@@ -152,10 +152,13 @@ h1 {
     cursor: pointer;
 }
 #listOfJobs li {
-    text-decoration: underline;
+    margin-bottom: 8px;
+    }
+#listOfJobs li span{
+    border-bottom: 1px solid black;
     cursor: pointer;
-    margin-bottom: 3px;
 }
 #listOfJobs p {
+    text-align: justify;
     display: none;
 }
