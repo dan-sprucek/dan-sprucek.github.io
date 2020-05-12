@@ -1,7 +1,7 @@
 // PRE-DEFINED FUNCTIONS
 // CLICK TO GET TO ANTOHER TAB
-function test(parameter){
-    $(parameter).trigger("click");
+function showClickedTab(clickedTab){
+    $(clickedTab).trigger("click");
 };
 
 // NAVBAR FIRST OPTION LEFT BORDER
@@ -9,7 +9,7 @@ $("#navigationBarList li a").first().css("border-left", "1px solid white");
 
 // DECIDING WHETHER TO USE CURRENT LEARNIGN + RANDOM QUOTE
 $(window).on("load resize", function(){
-    if ($(window).width() < 970){
+    if ($(window).width() < 1020){
         $("#randomQuote, #currentlyLearning").css("display", "none");
 }   else {
         $("#randomQuote, #currentlyLearning").css("display", "inline");
@@ -78,7 +78,7 @@ $("#selectCV div").on("click", function(){
 });
 
 // WORK EXPERIENCE LINK TO CV
-$("#linkDownloadCV").on("click", function(){
+$("#linkToDownloadCV").on("click", function(){
     test("#downloadCV");
 });
 
@@ -86,3 +86,26 @@ $("#linkDownloadCV").on("click", function(){
 $("#listOfJobs li").on("click", function(){
     $(this).nextUntil("li").slideToggle(400);
 });
+
+// PROGRAMS LINKS
+$("#linkToCube").on("click", function(){
+    showClickedTab("#cube");
+})
+$("#linkToRandomSelector").on("click", function(){
+    showClickedTab("#randomSelector");
+});
+
+// CUBE DIFFICULTY
+
+
+// CUBE MOVEMENT
+$("#staticCube").hover(function(){
+    $(this).toggleClass("movingCube");
+    $("#cubeCounter").html(0); 
+},  function(){
+        $(this).toggleClass("movingCube");
+    });
+// CLICK COUNTER
+$("#staticCube").on("click", function(){
+    $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
+})

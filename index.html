@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITLE OF THE SITE -->
     <title>Dan's Website</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER IMAGE + INTRODUCTION -->
-   <div id="header"><img src="https://www.publicdomainpictures.net/pictures/280000/velka/dark-blue-glitter-background.jpg"><div>Hi! My name is Dan!</div>
+   <div id="header"><img src="https://cdn.pixabay.com/photo/2018/02/11/09/37/matrix-full-3145364_960_720.jpg"><div>Hi! My name is Dan!</div>
    </div>
    <!-- NAVIGATION BAR -->
    <div id="navigationBar">
@@ -44,7 +45,7 @@
         </div>
         <div class="mainContent">
             <h1>About Me</h1>
-            <p>Hi! My name is Dan and I am a new web developer in the world! After years of working as a Project Manager and spending some time abroad I figured IT will be my next passion.</p>
+            <p>Hi! My name is Dan Sprucek and I am a new web developer in the world! After years of working as a Project Manager and spending some time abroad I figured IT will be my next passion.</p>
             <p>I started with HTML/CSS/JS educational videos by <a href="https://www.mikedane.com/">Mike Dane</a>, who deserves a big credit for these. Next came a free 3 weeks course from <a href="https://www.greenfoxacademy.cz/">Greenfox Academy</a> deepening my HTML/CSS knowledge and adding jQuery to my skill portfolio. At the same time I also went through educational videos of PHP, Python and SQL (again kudos to Mike Dane) to understand the basics and be ready to deepen the skill when needed.</p>
         </div>
    </div>
@@ -72,7 +73,7 @@
         </div>
         <div class="mainContent">
             <h1>Work Experience</h1>
-            <p>For my Work Experience in brief, please <span id="linkDownloadCV">see my CV</span>.</p>
+            <p>For my Work Experience in brief, please <span id="linkToDownloadCV">see my CV</span>.</p>
             <p>Otherwise, here is my full description of the work I did since my University studies:</p>
             <ul id="listOfJobs">
                 <li><span>CZECH-IN (2012-2015)</span></li>
@@ -105,25 +106,35 @@
         <!-- PROGRAMS -->
         <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Programs">
+            <img src="https://cdn.pixabay.com/photo/2016/07/29/10/45/graphic-1552416_960_720.png" alt="Programs">
         </div>
         <div class="mainContent">
             <h1>Programs</h1>
-            <h2>WORK IN PROGRESS</h2>
-            <p>Hi! My name is Dan and I am a new web developer in the world! After years of working as a Project Manager and spending some time abroad I figured IT will be my next passion.</p>
-            <p>I started with HTML/CSS/JS educational videos by <a href="https://www.mikedane.com/">Mike Dane</a>, who deserves a big credit for these. Next came a free 3 weeks course from <a href="https://www.greenfoxacademy.cz/">Greenfox Academy</a> deepening my HTML/CSS knowledge and adding jQuery to my skill portfolio. At the same time I also went through educational videos of PHP, Python and SQL (again kudos to Mike Dane) to understand the basics and be ready to deepen the skill when needed.</p>
+            <p>This is my collection of little programs and apps I started creating once I leant first bits about web development:</p>
+            <ul id="listOfPrograms">
+                <li id="linkToCube"><span>Cube</span></li>
+                <p>A first program I wrote - using keywords you have to follow the cube till the end to see the final color and select the right answer.</p>
+                <li id="linkToRandomSelector"><span>Random Selector</span></li>
+                <p>This I created for internal use using random function - to select who starts the game, does the chores etc.</p>
+            </ul>
         </div>
     </div>
         <!-- CUBE -->
     <div class="mainContainer">
         <div class="mainImage">
-            <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Cube">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQy4nnnGu3xJfsOIwyZ7uBmvo3NTWBZBnb1uhpy2M1ozkB6tVBK&usqp=CAU" alt="Cube">
         </div>
         <div class="mainContent">
             <h1>Cube</h1>
-            <h2>WORK IN PROGRESS</h2>
-            <p>Hi! My name is Dan and I am a new web developer in the world! After years of working as a Project Manager and spending some time abroad I figured IT will be my next passion.</p>
-            <p>I started with HTML/CSS/JS educational videos by <a href="https://www.mikedane.com/">Mike Dane</a>, who deserves a big credit for these. Next came a free 3 weeks course from <a href="https://www.greenfoxacademy.cz/">Greenfox Academy</a> deepening my HTML/CSS knowledge and adding jQuery to my skill portfolio. At the same time I also went through educational videos of PHP, Python and SQL (again kudos to Mike Dane) to understand the basics and be ready to deepen the skill when needed.</p>
+            <p>The instructions are easy - hover over the cube and it will start moving. Stay with it till the end to guess the final color.</p>
+            <p>But first, select the difficulty:</p>
+            <ul id="selectDifficulty">
+                <li><input type="radio" name="difficulty" data-animation="25s">Easy</li>
+                <li><input type="radio" name="difficulty" data-animation="40s">Medium</li>
+                <li><input type="radio" name="difficulty" data-animation="60s">Hard</li>
+            </ul>
+            <div id="staticCube"></div>
+            <p>Number of clicks during animation: <span id="cubeCounter">0</span></p>
         </div>
     </div>
         <!-- RANDOM SELECTOR -->
