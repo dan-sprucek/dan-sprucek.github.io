@@ -127,6 +127,7 @@ $("#staticCube").hover(function(){
     $("#selectAnswer div").children(0).val("");
     $("#selectAnswer div").eq(i - 1).children(0).val("correct");
     $("#selectAnswer").next().html("");
+    $("#selectAnswer div input").prop("checked", false);
     $("#staticCube").on("click", function(){
         $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
     });
