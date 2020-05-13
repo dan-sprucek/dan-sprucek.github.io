@@ -128,22 +128,43 @@
             <h1>Cube</h1>
             <p>The instructions are easy - hover over the cube and it will start moving. Stay with it till the end to guess the final color.</p>
             <p>But first, select the difficulty:</p>
-            <form id="selectDifficulty">
+            <div id="selectDifficulty">
                 <div>
-                    <input type="radio" name="difficulty" value="60s" id="cubeEasy" checked>
+                    <input type="radio" name="difficulty" value="60s" data-interval="61000" id="cubeEasy">
                     <label for="cubeEasy">Easy</label>
                 </div>
                 <div>
-                    <input type="radio" name="difficulty" value="40s" id="cubeMedium">
+                    <input type="radio" name="difficulty" value="40s" data-interval="41000" id="cubeMedium">
                     <label for="cubeMedium">Medium</label>
                 </div>
                 <div>
-                    <input type="radio" name="difficulty" value="25s" id="cubeHard">
+                    <input type="radio" name="difficulty" value="25s" data-interval="26000" id="cubeHard">
                     <label for="cubeHard">Hard</label>
                 </div>
-            </form>
+            </div>
             <div id="staticCube"></div>
             <p>Number of clicks during animation: <span id="cubeCounter">0</span></p>
+            <p>Select the final color:</p>
+            <div id="selectAnswer">
+                <div>
+                    <input type="radio" name="answer" id="answerSalmon">
+                    <label for="answerSalmon">Salmon</label>
+                </div>
+                <div>
+                    <input type="radio" name="answer" id="answerBlack">
+                    <label for="answerBlack">Black</label>
+                </div>
+                <div>
+                    <input type="radio" name="answer" id="answerBlue">
+                    <label for="answerBlue">Blue</label>
+                </div>
+                <div>
+                    <input type="radio" name="answer" id="answerGreen">
+                    <label for="answerGreen">Green</label>
+                </div>
+            </div>
+            <p></p>
+            <p>BEST SCORE: <span id="bestScore">0</span></p>
         </div>
     </div>
         <!-- RANDOM SELECTOR -->

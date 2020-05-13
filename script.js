@@ -100,31 +100,56 @@ $("#linkToRandomSelector").on("click", function(){
 });
 
 // CUBE DIFFICULTY
+var multiplicator, cubeClickTime = 61000;
 $("#selectDifficulty input").on("click", function(){
     $("#staticCube").css("animation-duration", $(this).val());
+    multiplicator = $(this).parent().index() + 1;
+    cubeClickTime = $(this).data("interval");
 });
 
-// CUBE MOVEMENT
+// CUBE MOVEMENT + CLICK COUNTER
 $("#staticCube").hover(function(){
     $(this).toggleClass("movingCube");
     $("#cubeCounter").html(0);
-    var i = randomInteger(1, 4);
-    if (i >= 4){
-        $("#staticCube").addClass("cubeSalmon");
-    } else if (i == 3){
+    do {
+        var i = randomInteger(1, 4);
+    }
+    while (i == 5);
+    if (i == 1){
         $("#staticCube").addClass("cubeSalmon");
     } else if (i == 2){
-        $("#staticCube").addClass("cubeSalmon");
+        $("#staticCube").addClass("cubeBlack");
+    } else if (i == 3){
+        $("#staticCube").addClass("cubeBlue");
     } else {
-        $("#staticCube").addClass("cubeSalmon");
-    }
+        $("#staticCube").addClass("cubeGreen");
+    };  
+    $("#selectAnswer div").children(0).val("");
+    $("#selectAnswer div").eq(i - 1).children(0).val("correct");
+    $("#selectAnswer").next().html("");
+    $("#staticCube").on("click", function(){
+        $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
+    });
+    setTimeout(function(){$("#staticCube").off("click");}, cubeClickTime);
 },  function(){
         $(this).removeClass();
+        clearTimeout();
+        $("#staticCube").off("click");
     });
-    
-// CLICK COUNTER
-$("#staticCube").on("click", function(){
-    $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
-})
 
-// WILL BE USEFUL
+// CORRECT ANSWER CHECKER
+var score, bestScore;
+$("#selectAnswer div input").on("click", function(){
+    if ($(this).val() == "correct"){
+        $("#selectAnswer").next().html("Your answer is <span>CORRECT</span>! Your final score is <span id='finalScore'></span>");
+        $("#finalScore").html(parseInt($("#cubeCounter").html()) * multiplicator + 10 * multiplicator);
+        score = ($("#finalScore").html());
+        bestScore = ($("#bestScore").html());
+        if (score > bestScore) {
+            $("#bestScore").html(score);
+        }
+    } else {
+        $("#selectAnswer").next().html("Your answer is <span>INCORRECT :(</span>, but try again!");
+        $("#selectAnswer div").children(0).val("");
+    }
+});
