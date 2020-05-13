@@ -184,10 +184,6 @@ h1 {
     padding-left: 20px;
 }
 /* CUBE */
-#selectDifficulty {
-    list-style-type: none;
-    padding-left: 0;
-}
 #staticCube {
     height: 50px;
     width: 50px;
@@ -195,13 +191,24 @@ h1 {
     position: relative;
 }
 .movingCube {
-    animation-name: cube;
-    animation-duration: 30s;
+    animation-duration: 60s;
     animation-delay: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
-@keyframes cube {
+.cubeSalmon {
+    animation-name: cubeSalmon;
+}
+.cubeBlack {
+    animation-name: cubeBlack;
+}
+.cubeBlue {
+    animation-name: cubeBlue;
+}
+.cubeGreen {
+    animation-name: cubeGreen;
+}
+@keyframes cubeSalmon {
     0% {
         background-color: red;
         left: 0px;

@@ -3,6 +3,10 @@
 function showClickedTab(clickedTab){
     $(clickedTab).trigger("click");
 };
+// SELECT RANDOM NUMBER
+function randomInteger(min, max){
+    return Math.floor(min + Math.random()*(max + 1 - min));
+};
 
 // NAVBAR FIRST OPTION LEFT BORDER
 $("#navigationBarList li a").first().css("border-left", "1px solid white");
@@ -96,16 +100,31 @@ $("#linkToRandomSelector").on("click", function(){
 });
 
 // CUBE DIFFICULTY
-
+$("#selectDifficulty input").on("click", function(){
+    $("#staticCube").css("animation-duration", $(this).val());
+});
 
 // CUBE MOVEMENT
 $("#staticCube").hover(function(){
     $(this).toggleClass("movingCube");
-    $("#cubeCounter").html(0); 
+    $("#cubeCounter").html(0);
+    var i = randomInteger(1, 4);
+    if (i >= 4){
+        $("#staticCube").addClass("cubeSalmon");
+    } else if (i == 3){
+        $("#staticCube").addClass("cubeSalmon");
+    } else if (i == 2){
+        $("#staticCube").addClass("cubeSalmon");
+    } else {
+        $("#staticCube").addClass("cubeSalmon");
+    }
 },  function(){
-        $(this).toggleClass("movingCube");
+        $(this).removeClass();
     });
+    
 // CLICK COUNTER
 $("#staticCube").on("click", function(){
     $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
 })
+
+// WILL BE USEFUL

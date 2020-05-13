@@ -128,11 +128,20 @@
             <h1>Cube</h1>
             <p>The instructions are easy - hover over the cube and it will start moving. Stay with it till the end to guess the final color.</p>
             <p>But first, select the difficulty:</p>
-            <ul id="selectDifficulty">
-                <li><input type="radio" name="difficulty" data-animation="25s">Easy</li>
-                <li><input type="radio" name="difficulty" data-animation="40s">Medium</li>
-                <li><input type="radio" name="difficulty" data-animation="60s">Hard</li>
-            </ul>
+            <form id="selectDifficulty">
+                <div>
+                    <input type="radio" name="difficulty" value="60s" id="cubeEasy" checked>
+                    <label for="cubeEasy">Easy</label>
+                </div>
+                <div>
+                    <input type="radio" name="difficulty" value="40s" id="cubeMedium">
+                    <label for="cubeMedium">Medium</label>
+                </div>
+                <div>
+                    <input type="radio" name="difficulty" value="25s" id="cubeHard">
+                    <label for="cubeHard">Hard</label>
+                </div>
+            </form>
             <div id="staticCube"></div>
             <p>Number of clicks during animation: <span id="cubeCounter">0</span></p>
         </div>
