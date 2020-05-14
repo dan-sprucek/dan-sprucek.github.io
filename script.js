@@ -212,3 +212,6 @@ $(".linkToPrograms").on("click", function(){
 });
 
 // GO BACK = WHERE I WAS; ANIMATION?
+$(window).on("hashchange", function(){
+    console.log("hashed!");
+})
