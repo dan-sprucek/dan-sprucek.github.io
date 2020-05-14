@@ -17,29 +17,29 @@
         <span id="currentlyLearning"><i>"Currently learning: reactJS"</i></span>
         <span id="randomQuote"><i><q>It's never too late to shine.</q></i></span>    
         <ul id="navigationBarList">
-            <li><a id="aboutMe" id="test" href="#/about">ABOUT ME</a>
+            <li><a class="tabs" id="aboutMe" href="#about">ABOUT ME</a>
                 <ul class="dropdownContent">
-                    <li><a id="downloadCV" href="#/about/downloadcv">Download CV</a></li>
-                    <li><a id="workExperience" href="#/about/work">Work Experience</a></li>
+                    <li><a class="tabs" id="downloadCV" href="#about/downloadcv">Download CV</a></li>
+                    <li><a class="tabs" id="workExperience" href="#about/work">Work Experience</a></li>
                 </ul>
             </li>
-            <li><a id="programs" href="#/programs">PROGRAMS</a>
+            <li><a class="tabs" id="programs" href="#programs">PROGRAMS</a>
                 <ul class="dropdownContent">
-                    <li><a id="cube" href="#/programs/cube">Cube</a></li>
-                    <li><a id="randomSelector" href="#/programs/random">Random Selector</a></li>
+                    <li><a class="tabs" id="cube" href="#programs/cube">Cube</a></li>
+                    <li><a class="tabs" id="randomSelector" href="#programs/random">Random Selector</a></li>
                 </ul>
             </li>
-            <li><a id="hobbies" href="#/hobbies">HOBBIES</a>
+            <li><a class="tabs" id="hobbies" href="#hobbies">HOBBIES</a>
                 <ul class="dropdownContent">
-                    <li><a id="sport" href="#/hobbies/sport">Sport</a></li>
+                    <li><a class="tabs" id="sport" href="#hobbies/sport">Sport</a></li>
                 </ul>
             </li>
-            <li><a id="contact" href="#/contact">CONTACT</a></li>
+            <li><a class="tabs" id="contact" href="#contact">CONTACT</a></li>
         </ul> 
    </div>       
    <!-- MAIN CONTENT (IMAGE + CONTENT) -->
          <!-- ABOUT ME -->
-   <div class="mainContainer">
+   <div class="mainContainer" id="about">
         <div class="mainImage">
             <img src="https://media-exp1.licdn.com/dms/image/C4D03AQFLrmaSSxLWWA/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=bX6ZTNJOq9SJhccwt0z014ueArh_oYY-POHVAoDxEBo" alt="Profile">
         </div>
@@ -50,7 +50,7 @@
         </div>
    </div>
          <!-- DOWNLOAD CV -->
-   <div class="mainContainer">
+   <div class="mainContainer" id="about/downloadcv">
         <div class="mainImage">
             <img src="https://www.picserver.org/highway-signs2/images/curriculum-vitae.jpg" alt="CV">
         </div>
@@ -67,7 +67,7 @@
         </div>
     </div>
          <!-- WORK EXPERIENCE -->
-   <div class="mainContainer">
+   <div class="mainContainer" id="about/work">
         <div class="mainImage">
             <img src="https://www.thebluediamondgallery.com/handwriting/images/experience.jpg" alt="Work Experience">
         </div>
@@ -104,7 +104,7 @@
         </div>
     </div>
         <!-- PROGRAMS -->
-        <div class="mainContainer">
+    <div class="mainContainer" id="programs">
         <div class="mainImage">
             <img src="https://cdn.pixabay.com/photo/2016/07/29/10/45/graphic-1552416_960_720.png" alt="Programs">
         </div>
@@ -120,7 +120,7 @@
         </div>
     </div>
         <!-- CUBE -->
-    <div class="mainContainer">
+    <div class="mainContainer" id="programs/cube">
         <div class="mainImage">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQy4nnnGu3xJfsOIwyZ7uBmvo3NTWBZBnb1uhpy2M1ozkB6tVBK&usqp=CAU" alt="Cube">
         </div>
@@ -168,7 +168,7 @@
         </div>
     </div>
         <!-- RANDOM SELECTOR -->
-    <div class="mainContainer">
+    <div class="mainContainer" id="programs/random">
         <div class="mainImage">
             <img src="https://storage.needpix.com/rsynced_images/blind.jpg" alt="Random">
         </div>
@@ -187,7 +187,7 @@
         </div>
     </div>
         <!-- HOBBIES -->
-    <div class="mainContainer">
+    <div class="mainContainer" id="hobbies">
         <div class="mainImage">
             <img src="https://cdn.pixabay.com/photo/2016/10/11/14/32/daily-1731762_960_720.jpg" alt="Hobbies">
         </div>
@@ -203,7 +203,7 @@
         </div>
     </div>
         <!-- SPORT -->
-    <div class="mainContainer">
+    <div class="mainContainer" id="hobbies/sport">
         <div class="mainImage">
             <img src="https://cdn.pixabay.com/photo/2017/10/26/17/51/under-construction-2891888_960_720.jpg" alt="Sport">
         </div>
@@ -214,7 +214,7 @@
         </div>
     </div>
         <!-- CONTACT -->
-    <div class="mainContainer">
+    <div class="mainContainer" id="contact">
         <div class="mainImage">
             <img src="https://www.thebluediamondgallery.com/typewriter/images/contact.jpg" alt="Contact">
         </div>

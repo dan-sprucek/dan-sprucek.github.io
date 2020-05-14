@@ -26,16 +26,36 @@ $("#navigationBarList li").hover(function(){
 });
 
 // FIRST TAB SHOWS ON LOAD AND HIGHLIGHTS NAVBAR
-$(".mainContainer").first().addClass("active");
-$("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
+// $(".mainContainer").first().addClass("active");
+// $(".tabs").eq($(".active").index()).addClass("activeTab");
+if (!location.hash){
+    location.hash = "#about";
+} else {
+    var container, pagename;
+    for (i = 0; i < $(".mainContainer").length; i++){
+        container = $(".mainContainer").eq(i).attr("id");
+        tabName = $(".tabs").eq(i).attr("href").substring(1);
+        pagename = location.hash.substring(1);
+        if (container === pagename){
+            $(".mainContainer").eq(i).addClass("active");
+        }   else {
+            $(".mainContainer").eq(i).removeClass("active");
+            };
+        if (tabName === pagename){
+            $(".tabs").eq(i).addClass("activeTab");
+        }   else {
+            $(".tabs").eq(i).removeClass("activeTab");
+            };
+        };
+};
 
 // CLICKING NAVIGATION OPTIONS
-$("#navigationBarList li a").on("click", function(){
-    $(".mainContainer").removeClass("active");
-    $("#navigationBarList li a").removeClass("activeTab");
-    $(".mainContainer").eq($("#navigationBarList li a").index(this)).addClass("active");
-    $("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
-});
+// $("#navigationBarList li a").on("click", function(){
+//     $(".mainContainer").removeClass("active");
+//     $("#navigationBarList li a").removeClass("activeTab");
+//     $(".mainContainer").eq($("#navigationBarList li a").index(this)).addClass("active");
+//     $("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
+// });
 
 // DOWNLOAD CV DEFAULT SELECTOR
 $("#selectCV div").filter(":eq(0), :eq(2)").addClass("CVselected");
@@ -212,6 +232,49 @@ $(".linkToPrograms").on("click", function(){
 });
 
 // GO BACK = WHERE I WAS; ANIMATION?
+// $(window).on("hashchange", function(){
+//     console.log(location.hash);
+//     if (location.hash == "#/about") {
+//         $(".mainContainer").eq(3).toggle();
+//     }
+// });
+
+// $("#navigationBarList li a").on("click", function(){
+//     $(".mainContainer").removeClass("active");
+//     $("#navigationBarList li a").removeClass("activeTab");
+//     $(".mainContainer").eq($("#navigationBarList li a").index(this)).addClass("active");
+//     $("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
+// });
+
+// console.log("test");
+// console.log($("#programs").attr("id"));
+// if (location.hash.substring(1) == $(".mainContainer").attr("id")){
+//     alert("might be");
+    
+// }
+// console.log(location.hash.substring(1));
+// console.log($(".mainContainer").length);
+// console.log($(".mainContainer").eq(1).attr("id"));
+// console.log(location.hash.substring(1));
+// console.log($(".tabs").eq(1).attr("href").substring(1));
+
+
+
 $(window).on("hashchange", function(){
-    console.log("hashed!");
-})
+    var container, pagename;
+    for (i = 0; i < $(".mainContainer").length; i++){
+        container = $(".mainContainer").eq(i).attr("id");
+        tabName = $(".tabs").eq(i).attr("href").substring(1);
+        pagename = location.hash.substring(1);
+        if (container === pagename){
+            $(".mainContainer").eq(i).addClass("active");
+        }   else {
+            $(".mainContainer").eq(i).removeClass("active");
+            };
+        if (tabName === pagename){
+            $(".tabs").eq(i).addClass("activeTab");
+        }   else {
+            $(".tabs").eq(i).removeClass("activeTab");
+            };
+        }
+    });

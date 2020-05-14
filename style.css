@@ -4,6 +4,9 @@ body, html {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
 }
+html {
+    overflow-y: scroll;
+}
 body div {
     width: 100%;
 }
@@ -93,7 +96,7 @@ p {
     display: none;
 }
 .active {
-    display:flex;
+    display: flex;
 }
 /* MAIN IMG - LEFT SIDE */
 .mainImage {
