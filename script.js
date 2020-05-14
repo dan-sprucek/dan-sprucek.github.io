@@ -1,8 +1,4 @@
 // PRE-DEFINED FUNCTIONS
-// CLICK TO GET TO ANTOHER TAB
-function showClickedTab(clickedTab){
-    $(clickedTab).trigger("click");
-};
 // SELECT RANDOM NUMBER
 function randomInteger(min, max){
     return Math.floor(min + Math.random()*(max + 1 - min));
@@ -26,16 +22,14 @@ $("#navigationBarList li").hover(function(){
 });
 
 // FIRST TAB SHOWS ON LOAD AND HIGHLIGHTS NAVBAR
-// $(".mainContainer").first().addClass("active");
-// $(".tabs").eq($(".active").index()).addClass("activeTab");
 if (!location.hash){
     location.hash = "#about";
 } else {
     var container, pagename;
     for (i = 0; i < $(".mainContainer").length; i++){
         container = $(".mainContainer").eq(i).attr("id");
-        tabName = $(".tabs").eq(i).attr("href").substring(1);
-        pagename = location.hash.substring(1);
+        tabName = $(".tabs").eq(i).attr("href").substring(1) + "x";
+        pagename = location.hash.substring(1) + "x";
         if (container === pagename){
             $(".mainContainer").eq(i).addClass("active");
         }   else {
@@ -50,12 +44,24 @@ if (!location.hash){
 };
 
 // CLICKING NAVIGATION OPTIONS
-// $("#navigationBarList li a").on("click", function(){
-//     $(".mainContainer").removeClass("active");
-//     $("#navigationBarList li a").removeClass("activeTab");
-//     $(".mainContainer").eq($("#navigationBarList li a").index(this)).addClass("active");
-//     $("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
-// });
+$(window).on("hashchange", function(){
+    var container, pagename;
+    for (i = 0; i < $(".mainContainer").length; i++){
+        container = $(".mainContainer").eq(i).attr("id");
+        tabName = $(".tabs").eq(i).attr("href").substring(1) + "x";
+        pagename = location.hash.substring(1) + "x";
+        if (container === pagename){
+            $(".mainContainer").eq(i).addClass("active");
+        }   else {
+            $(".mainContainer").eq(i).removeClass("active");
+            };
+        if (tabName === pagename){
+            $(".tabs").eq(i).addClass("activeTab");
+        }   else {
+            $(".tabs").eq(i).removeClass("activeTab");
+            };
+        }
+    });
 
 // DOWNLOAD CV DEFAULT SELECTOR
 $("#selectCV div").filter(":eq(0), :eq(2)").addClass("CVselected");
@@ -101,22 +107,9 @@ $("#selectCV div").on("click", function(){
     }
 });
 
-// WORK EXPERIENCE LINK TO CV
-$(".linkToDownloadCV").on("click", function(){
-    showClickedTab("#downloadCV");
-});
-
 // WORK EXPERIENCE TOGGLE SHOW JOB
 $("#listOfJobs li").on("click", function(){
     $(this).nextUntil("li").slideToggle(400);
-});
-
-// PROGRAMS LINKS
-$("#linkToCube").on("click", function(){
-    showClickedTab("#cube");
-})
-$("#linkToRandomSelector").on("click", function(){
-    showClickedTab("#randomSelector");
 });
 
 // CUBE DIFFICULTY
@@ -222,59 +215,5 @@ $("#resetRandom").on("dblclick", function(){
     $("#randomSelectContainer input").val("");
 });
 
-// HOBBIES
-$(".linkToSport").on("click", function(){
-    showClickedTab("#sport");
-});
+// ANIMATION?
 
-$(".linkToPrograms").on("click", function(){
-    showClickedTab("#programs");
-});
-
-// GO BACK = WHERE I WAS; ANIMATION?
-// $(window).on("hashchange", function(){
-//     console.log(location.hash);
-//     if (location.hash == "#/about") {
-//         $(".mainContainer").eq(3).toggle();
-//     }
-// });
-
-// $("#navigationBarList li a").on("click", function(){
-//     $(".mainContainer").removeClass("active");
-//     $("#navigationBarList li a").removeClass("activeTab");
-//     $(".mainContainer").eq($("#navigationBarList li a").index(this)).addClass("active");
-//     $("#navigationBarList li a").eq($(".active").index() - 2).addClass("activeTab");
-// });
-
-// console.log("test");
-// console.log($("#programs").attr("id"));
-// if (location.hash.substring(1) == $(".mainContainer").attr("id")){
-//     alert("might be");
-    
-// }
-// console.log(location.hash.substring(1));
-// console.log($(".mainContainer").length);
-// console.log($(".mainContainer").eq(1).attr("id"));
-// console.log(location.hash.substring(1));
-// console.log($(".tabs").eq(1).attr("href").substring(1));
-
-
-
-$(window).on("hashchange", function(){
-    var container, pagename;
-    for (i = 0; i < $(".mainContainer").length; i++){
-        container = $(".mainContainer").eq(i).attr("id");
-        tabName = $(".tabs").eq(i).attr("href").substring(1);
-        pagename = location.hash.substring(1);
-        if (container === pagename){
-            $(".mainContainer").eq(i).addClass("active");
-        }   else {
-            $(".mainContainer").eq(i).removeClass("active");
-            };
-        if (tabName === pagename){
-            $(".tabs").eq(i).addClass("activeTab");
-        }   else {
-            $(".tabs").eq(i).removeClass("activeTab");
-            };
-        }
-    });
