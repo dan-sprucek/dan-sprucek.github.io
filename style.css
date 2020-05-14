@@ -1,6 +1,5 @@
 /* PAGE SETTINGS */
 body, html {
-    height: 100%;
     width: 100%;
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
@@ -33,7 +32,8 @@ p {
 /* NAVIGATION BAR */
 #navigationBar {
     background-color: black;
-    position: relative;
+    position: sticky;
+    top: 0;
     font-family: sans-serif;
 }
 #navigationBarList {
@@ -155,7 +155,7 @@ h1 {
     background-color: lightseagreen;
 }
 /* WORK EXPERIENCE */
-#linkToDownloadCV {
+.linkToDownloadCV, .linkToSport, .linkToPrograms {
     font-weight: bold;
     font-size: 1.1em;
     cursor: pointer;
@@ -716,4 +716,28 @@ h1 {
         top: 0px;
         transform: rotate(0deg);
     }
+}
+
+/* RANDOM SELECTOR */
+#randomSelectContainer ol {
+    padding-left: 20px;
+}
+#randomSelectContainer ol li {
+    width: 150px;
+    overflow-wrap: break-word;
+    position: relative;
+}
+#randomSelectContainer ol li img {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 4px;
+    padding: 2px;
+}
+#showAtLeastTwo, #randomResult, #resetNotification {
+    display: none;
+}
+
+#resetNotification {
+    color: red;
 }

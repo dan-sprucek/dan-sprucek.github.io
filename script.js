@@ -82,8 +82,8 @@ $("#selectCV div").on("click", function(){
 });
 
 // WORK EXPERIENCE LINK TO CV
-$("#linkToDownloadCV").on("click", function(){
-    test("#downloadCV");
+$(".linkToDownloadCV").on("click", function(){
+    showClickedTab("#downloadCV");
 });
 
 // WORK EXPERIENCE TOGGLE SHOW JOB
@@ -108,13 +108,11 @@ $("#selectDifficulty input").on("click", function(){
 });
 
 // CUBE MOVEMENT + CLICK COUNTER
+var cubeTimer;
 $("#staticCube").hover(function(){
     $(this).toggleClass("movingCube");
     $("#cubeCounter").html(0);
-    do {
-        var i = randomInteger(1, 4);
-    }
-    while (i == 5);
+    var i = randomInteger(1, 4);
     if (i == 1){
         $("#staticCube").addClass("cubeSalmon");
     } else if (i == 2){
@@ -131,10 +129,10 @@ $("#staticCube").hover(function(){
     $("#staticCube").on("click", function(){
         $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
     });
-    setTimeout(function(){$("#staticCube").off("click");}, cubeClickTime);
+    cubeTimer = setTimeout(function(){$("#staticCube").off("click");}, cubeClickTime);
 },  function(){
         $(this).removeClass();
-        clearTimeout();
+        clearTimeout(cubeTimer);
         $("#staticCube").off("click");
     });
 
@@ -153,4 +151,62 @@ $("#selectAnswer div input").on("click", function(){
         $("#selectAnswer").next().html("Your answer is <span>INCORRECT :(</span>, but try again!");
         $("#selectAnswer div").children(0).val("");
     }
+});
+
+// RANDOM SELECTOR
+// SELECTS INSIDE OF INPUT
+$("#randomSelectContainer input").on("click", function(){
+    $(this).select();
+});
+
+// ADDS NEW PERSON + SHOWS SUBMIT
+$("#addPerson").on("click", function(){
+    if ($("#randomSelectContainer input").val() == ""){
+    } else{
+    $("#randomSelectContainer ol").append("<li><span>" + $("#randomSelectContainer input").val() + "</span><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_X.svg/1024px-Red_X.svg.png' style='width:10px;height:10px'</li>");
+    if ($("#randomSelectContainer ol").children().length > 1){
+        $("#showAtLeastTwo").show();
+    } else {
+        $("#showAtLeastTwo").hide();
+    }
+};
+});
+
+// REMOVES PERSON + HIDES SUBMIT
+$("#randomSelectContainer ol").on("click", "li img", function(){
+    $(this).parent().remove();
+    if ($("#randomSelectContainer ol").children().length > 1){
+        $("#showAtLeastTwo").show();
+    } else {
+        $("#showAtLeastTwo").hide();
+    }
+});
+
+// FIRES RANDOM
+$("#showRandom").on("click", function(){
+    var i = randomInteger(1, $("#randomSelectContainer ol").children().length);
+    $("#randomResult").show();
+    $("#randomResult span").text($("#randomSelectContainer ol li").eq(i-1).children('span').html());
+});
+
+// RESETS FUNCTION
+$("#resetRandom").on("click", function(){
+    $("#resetNotification").show();
+});
+
+$("#resetRandom").on("dblclick", function(){
+    $($("#randomSelectContainer ol").children().remove());
+    $("#showAtLeastTwo").hide();
+    $("#randomResult").hide();
+    $("#resetNotification").hide()
+    $("#randomSelectContainer input").val("");
+});
+
+// HOBBIES
+$(".linkToSport").on("click", function(){
+    showClickedTab("#sport");
+});
+
+$(".linkToPrograms").on("click", function(){
+    showClickedTab("#programs");
 });
