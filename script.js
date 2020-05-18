@@ -23,7 +23,10 @@ $("#navigationBarList li").hover(function(){
 
 // FIRST TAB SHOWS ON LOAD AND HIGHLIGHTS NAVBAR
 if (!location.hash){
-    location.hash = "#about";
+    location.hash = "#welcome";
+    $("#welcomex").css("display", "inline");
+}   else if (location.hash === "#welcome") {
+    $("#welcomex").css("display", "inline");
 } else {
     var container, pagename;
     for (i = 0; i < $(".mainContainer").length; i++){
@@ -43,10 +46,35 @@ if (!location.hash){
         };
 };
 
+// OPEN THE WINDOW
+$("#welcomex").on("click", function(){
+    location.href = "#about"
+    $("#openingMid").fadeOut(1000);
+    $(".lock").delay(1100).queue(function(next){
+        $(this).css({
+            "background-color": "lime",
+            "box-shadow": "0 0 10px lime"});
+            next();
+        });
+        $(".opening").delay(1400).animate({
+        width: 0
+    }, 3000, function(){
+        $("#welcomex").hide();
+    })
+});
+
 // CLICKING NAVIGATION OPTIONS
 $(window).on("hashchange", function(){
     var container, pagename;
-    for (i = 0; i < $(".mainContainer").length; i++){
+    if (location.hash === "#welcome") {
+        $("#welcomex").css("display", "inline");
+        $(".opening").css("width", "50%");
+        $("#openingMid").show();
+        $(".lock").css({
+            "background-color": "red",
+            "box-shadow": "0 0 10px red"});
+    } else {
+        for (i = 0; i < $(".mainContainer").length; i++){
         container = $(".mainContainer").eq(i).attr("id");
         tabName = $(".tabs").eq(i).attr("href").substring(1) + "x";
         pagename = location.hash.substring(1) + "x";
@@ -61,7 +89,7 @@ $(window).on("hashchange", function(){
             $(".tabs").eq(i).removeClass("activeTab");
             };
         }
-    });
+    }});
 
 // DOWNLOAD CV DEFAULT SELECTOR
 $("#selectCV div").filter(":eq(0), :eq(2)").addClass("CVselected");
@@ -214,6 +242,3 @@ $("#resetRandom").on("dblclick", function(){
     $("#resetNotification").hide()
     $("#randomSelectContainer input").val("");
 });
-
-// ANIMATION?
-
