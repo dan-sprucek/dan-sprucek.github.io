@@ -141,7 +141,7 @@ $("#listOfJobs li").on("click", function(){
 });
 
 // CUBE DIFFICULTY
-var multiplicator, cubeClickTime = 61000;
+var multiplicator, cubeClickTime = 31000;
 $("#selectDifficulty input").on("click", function(){
     $("#staticCube").css("animation-duration", $(this).val());
     multiplicator = $(this).parent().index() + 1;

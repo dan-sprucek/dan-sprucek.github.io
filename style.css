@@ -275,7 +275,7 @@ h1 {
     margin: 60px;
 }
 .movingCube {
-    animation-duration: 60s;
+    animation-duration: 30s;
     animation-delay: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -298,118 +298,58 @@ h1 {
         left: 0px;
         top: 0px;
     }
-    5% {
+    10% {
         background-color: green;
         left: 50px;
         top: 0px;
         transform: rotate(720deg);
     }
-    10% {
+    20% {
         background-color: blue;
         left: 100px;
-        top: 0px;
+        top: 50px;
         transform: rotate(0deg);
-    }
-    15% {
-        background-color: black;
-        left: 120px;
-        top: 75px;
-        transform: rotate(720deg);
-    }
-    20% {
-        background-color: orange;
-        left: 180px;
-        top: 100px;
-        transform: rotate(0deg);
-    }
-    25% {
-        background-color: red;
-        left: 220px;
-        top: 75px;
-        transform: rotate(720deg);
     }
     30% {
-        background-color: green;
-        left: 260px;
-        top: 35px;
-        transform: rotate(0deg);
-    }
-    35% {
-        background-color: blue;
-        left: 300px;
-        top: 0px;
+        background-color: black;
+        left: 125px;
+        top: 100px;
         transform: rotate(720deg);
     }
     40% {
-        background-color: black;
-        left: 350px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    45% {
         background-color: orange;
-        left: 380px;
-        top: 40px;
-        transform: rotate(720deg);
+        left: 150px;
+        top: 75px;
+        transform: rotate(0deg);
     }
     50% {
         background-color: red;
-        left: 350px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    55% {
-        background-color: green;
-        left: 320px;
-        top: 100px;
+        left: 150px;
+        top: 25px;
         transform: rotate(720deg);
     }
     60% {
-        background-color: blue;
-        left: 280px;
-        top: 80px;
+        background-color: green;
+        left: 125px;
+        top: -25px;
         transform: rotate(0deg);
-    }
-    65% {
-        background-color: black;
-        left: 220px;
-        top: 50px;
-        transform: rotate(720deg);
     }
     70% {
-        background-color: orange;
-        left: 280px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    75% {
-        background-color: red;
-        left: 230px;
-        top: 50px;
+        background-color: blue;
+        left: 100px;
+        top: 25px;
         transform: rotate(720deg);
     }
     80% {
-        background-color: green;
-        left: 180px;
-        top: 30px;
+        background-color: black;
+        left: 50px;
+        top: -15px;
         transform: rotate(0deg);
-    }
-    85% {
-        background-color: blue;
-        left: 130px;
-        top: 10px;
-        transform: rotate(720deg);
     }
     90% {
-        background-color: black;
-        left: 80px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    95% {
         background-color: orange;
-        left: 30px;
-        top: 0px;
+        left: 50px;
+        top: 15px;
         transform: rotate(720deg);
     }
     100% {
@@ -418,6 +358,7 @@ h1 {
         top: 0px;
         transform: rotate(0deg);
     }
+    
 }
 @keyframes cubeBlack {
     0% {
@@ -425,118 +366,58 @@ h1 {
         left: 0px;
         top: 0px;
     }
-    5% {
+    10% {
         background-color: green;
         left: 50px;
         top: 0px;
         transform: rotate(720deg);
     }
-    10% {
+    20% {
         background-color: blue;
         left: 100px;
-        top: 0px;
+        top: 50px;
         transform: rotate(0deg);
-    }
-    15% {
-        background-color: black;
-        left: 120px;
-        top: 75px;
-        transform: rotate(720deg);
-    }
-    20% {
-        background-color: orange;
-        left: 180px;
-        top: 100px;
-        transform: rotate(0deg);
-    }
-    25% {
-        background-color: red;
-        left: 220px;
-        top: 75px;
-        transform: rotate(720deg);
     }
     30% {
-        background-color: green;
-        left: 260px;
-        top: 35px;
-        transform: rotate(0deg);
-    }
-    35% {
-        background-color: blue;
-        left: 300px;
-        top: 0px;
+        background-color: black;
+        left: 125px;
+        top: 100px;
         transform: rotate(720deg);
     }
     40% {
-        background-color: black;
-        left: 350px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    45% {
         background-color: orange;
-        left: 380px;
-        top: 40px;
-        transform: rotate(720deg);
+        left: 150px;
+        top: 75px;
+        transform: rotate(0deg);
     }
     50% {
         background-color: red;
-        left: 350px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    55% {
-        background-color: green;
-        left: 320px;
-        top: 100px;
+        left: 150px;
+        top: 25px;
         transform: rotate(720deg);
     }
     60% {
-        background-color: blue;
-        left: 280px;
-        top: 80px;
+        background-color: green;
+        left: 125px;
+        top: -25px;
         transform: rotate(0deg);
-    }
-    65% {
-        background-color: black;
-        left: 220px;
-        top: 50px;
-        transform: rotate(720deg);
     }
     70% {
-        background-color: orange;
-        left: 280px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    75% {
-        background-color: red;
-        left: 230px;
-        top: 50px;
+        background-color: blue;
+        left: 100px;
+        top: 25px;
         transform: rotate(720deg);
     }
     80% {
-        background-color: green;
-        left: 180px;
-        top: 30px;
+        background-color: black;
+        left: 50px;
+        top: -15px;
         transform: rotate(0deg);
-    }
-    85% {
-        background-color: blue;
-        left: 130px;
-        top: 10px;
-        transform: rotate(720deg);
     }
     90% {
-        background-color: black;
-        left: 80px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    95% {
         background-color: orange;
-        left: 30px;
-        top: 0px;
+        left: 50px;
+        top: 15px;
         transform: rotate(720deg);
     }
     100% {
@@ -545,6 +426,7 @@ h1 {
         top: 0px;
         transform: rotate(0deg);
     }
+    
 }
 @keyframes cubeBlue {
     0% {
@@ -552,118 +434,58 @@ h1 {
         left: 0px;
         top: 0px;
     }
-    5% {
+    10% {
         background-color: green;
         left: 50px;
         top: 0px;
         transform: rotate(720deg);
     }
-    10% {
+    20% {
         background-color: blue;
         left: 100px;
-        top: 0px;
+        top: 50px;
         transform: rotate(0deg);
-    }
-    15% {
-        background-color: black;
-        left: 120px;
-        top: 75px;
-        transform: rotate(720deg);
-    }
-    20% {
-        background-color: orange;
-        left: 180px;
-        top: 100px;
-        transform: rotate(0deg);
-    }
-    25% {
-        background-color: red;
-        left: 220px;
-        top: 75px;
-        transform: rotate(720deg);
     }
     30% {
-        background-color: green;
-        left: 260px;
-        top: 35px;
-        transform: rotate(0deg);
-    }
-    35% {
-        background-color: blue;
-        left: 300px;
-        top: 0px;
+        background-color: black;
+        left: 125px;
+        top: 100px;
         transform: rotate(720deg);
     }
     40% {
-        background-color: black;
-        left: 350px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    45% {
         background-color: orange;
-        left: 380px;
-        top: 40px;
-        transform: rotate(720deg);
+        left: 150px;
+        top: 75px;
+        transform: rotate(0deg);
     }
     50% {
         background-color: red;
-        left: 350px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    55% {
-        background-color: green;
-        left: 320px;
-        top: 100px;
+        left: 150px;
+        top: 25px;
         transform: rotate(720deg);
     }
     60% {
-        background-color: blue;
-        left: 280px;
-        top: 80px;
+        background-color: green;
+        left: 125px;
+        top: -25px;
         transform: rotate(0deg);
-    }
-    65% {
-        background-color: black;
-        left: 220px;
-        top: 50px;
-        transform: rotate(720deg);
     }
     70% {
-        background-color: orange;
-        left: 280px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    75% {
-        background-color: red;
-        left: 230px;
-        top: 50px;
+        background-color: blue;
+        left: 100px;
+        top: 25px;
         transform: rotate(720deg);
     }
     80% {
-        background-color: green;
-        left: 180px;
-        top: 30px;
+        background-color: black;
+        left: 50px;
+        top: -15px;
         transform: rotate(0deg);
-    }
-    85% {
-        background-color: blue;
-        left: 130px;
-        top: 10px;
-        transform: rotate(720deg);
     }
     90% {
-        background-color: black;
-        left: 80px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    95% {
         background-color: orange;
-        left: 30px;
-        top: 0px;
+        left: 50px;
+        top: 15px;
         transform: rotate(720deg);
     }
     100% {
@@ -672,6 +494,7 @@ h1 {
         top: 0px;
         transform: rotate(0deg);
     }
+    
 }
 @keyframes cubeGreen {
     0% {
@@ -679,118 +502,58 @@ h1 {
         left: 0px;
         top: 0px;
     }
-    5% {
+    10% {
         background-color: green;
         left: 50px;
         top: 0px;
         transform: rotate(720deg);
     }
-    10% {
+    20% {
         background-color: blue;
         left: 100px;
-        top: 0px;
+        top: 50px;
         transform: rotate(0deg);
-    }
-    15% {
-        background-color: black;
-        left: 120px;
-        top: 75px;
-        transform: rotate(720deg);
-    }
-    20% {
-        background-color: orange;
-        left: 180px;
-        top: 100px;
-        transform: rotate(0deg);
-    }
-    25% {
-        background-color: red;
-        left: 220px;
-        top: 75px;
-        transform: rotate(720deg);
     }
     30% {
-        background-color: green;
-        left: 260px;
-        top: 35px;
-        transform: rotate(0deg);
-    }
-    35% {
-        background-color: blue;
-        left: 300px;
-        top: 0px;
+        background-color: black;
+        left: 125px;
+        top: 100px;
         transform: rotate(720deg);
     }
     40% {
-        background-color: black;
-        left: 350px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    45% {
         background-color: orange;
-        left: 380px;
-        top: 40px;
-        transform: rotate(720deg);
+        left: 150px;
+        top: 75px;
+        transform: rotate(0deg);
     }
     50% {
         background-color: red;
-        left: 350px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    55% {
-        background-color: green;
-        left: 320px;
-        top: 100px;
+        left: 150px;
+        top: 25px;
         transform: rotate(720deg);
     }
     60% {
-        background-color: blue;
-        left: 280px;
-        top: 80px;
+        background-color: green;
+        left: 125px;
+        top: -25px;
         transform: rotate(0deg);
-    }
-    65% {
-        background-color: black;
-        left: 220px;
-        top: 50px;
-        transform: rotate(720deg);
     }
     70% {
-        background-color: orange;
-        left: 280px;
-        top: 80px;
-        transform: rotate(0deg);
-    }
-    75% {
-        background-color: red;
-        left: 230px;
-        top: 50px;
+        background-color: blue;
+        left: 100px;
+        top: 25px;
         transform: rotate(720deg);
     }
     80% {
-        background-color: green;
-        left: 180px;
-        top: 30px;
+        background-color: black;
+        left: 50px;
+        top: -15px;
         transform: rotate(0deg);
-    }
-    85% {
-        background-color: blue;
-        left: 130px;
-        top: 10px;
-        transform: rotate(720deg);
     }
     90% {
-        background-color: black;
-        left: 80px;
-        top: 0px;
-        transform: rotate(0deg);
-    }
-    95% {
         background-color: orange;
-        left: 30px;
-        top: 0px;
+        left: 50px;
+        top: 15px;
         transform: rotate(720deg);
     }
     100% {
@@ -799,6 +562,7 @@ h1 {
         top: 0px;
         transform: rotate(0deg);
     }
+    
 }
 
 /* RANDOM SELECTOR */
