@@ -44,6 +44,12 @@ if (!location.hash){
             $(".tabs").eq(i).removeClass("activeTab");
             };
         };
+        $(".dropdownContent li a").parent().parent().siblings("a").removeClass("activeUnderTab");
+        for (j = 0; j < $(".dropdownContent li a").length; j++){
+        if ($(".dropdownContent li a").eq(j).hasClass("activeTab")){
+            $(".dropdownContent li a").eq(j).parent().parent().siblings("a").addClass("activeUnderTab");
+        };
+    }
 };
 
 // OPEN THE WINDOW
@@ -101,7 +107,15 @@ $(window).on("hashchange", function(){
             $(".tabs").eq(i).removeClass("activeTab");
             };
         }
-    }});
+    };
+    $(".dropdownContent li a").parent().parent().siblings("a").removeClass("activeUnderTab");
+    for (j = 0; j < $(".dropdownContent li a").length; j++){
+        if ($(".dropdownContent li a").eq(j).hasClass("activeTab")){
+            $(".dropdownContent li a").eq(j).parent().parent().siblings("a").addClass("activeUnderTab");
+        };
+    }
+    
+});
 
 // DOWNLOAD CV DEFAULT SELECTOR
 $("#selectCV div").filter(":eq(0), :eq(2)").addClass("CVselected");

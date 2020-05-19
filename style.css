@@ -159,6 +159,9 @@ p {
 .activeTab {
     background-color: green !important;
 }
+.activeUnderTab {
+    border-bottom: 5px solid green;
+}
 /* CURRENTLY LEARNING + RANDOM QUOTE */
 #currentlyLearning, #randomQuote {
     position: absolute;
