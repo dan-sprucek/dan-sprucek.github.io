@@ -212,7 +212,7 @@ h1 {
 #contactSide {
     position: fixed;
     right: 10px;
-    bottom: calc(100% - 75%);
+    top: calc(15% + 150px);
     width: 30px;
     display: flex;
     flex-direction: column;
