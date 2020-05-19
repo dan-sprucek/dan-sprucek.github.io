@@ -50,15 +50,27 @@ if (!location.hash){
 $("#welcomex").on("click", function(){
     location.href = "#about"
     $("#openingMid").fadeOut(1000);
-    $(".lock").delay(1100).queue(function(next){
+    $(".lockMid1, .lockMid2").delay(1100).queue(function(next){
         $(this).css({
             "background-color": "lime",
             "box-shadow": "0 0 10px lime"});
             next();
         });
-        $(".opening").delay(1400).animate({
-        width: 0
-    }, 3000, function(){
+    $(".lockTopMid, .lockBottomMid").delay(1700).queue(function(next){
+        $(this).css({
+            "background-color": "lime",
+            "box-shadow": "0 0 10px lime"});
+            next();
+        });
+    $(".lockTop, .lockBottom").delay(2300).queue(function(next){
+        $(this).css({
+            "background-color": "lime",
+            "box-shadow": "0 0 10px lime"});
+            next();
+        });
+    $(".opening").delay(2600).animate({
+    width: 0
+    }, 2500, function(){
         $("#welcomex").hide();
     })
 });

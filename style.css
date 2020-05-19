@@ -19,7 +19,6 @@ p {
     height: 100%;
     display: none;
     z-index: 1;
-    overflow-x: hidden;
     position: fixed;
     top: 0;
 }
@@ -58,6 +57,12 @@ p {
 }
 .lockTopMid {
     top: 10%;
+}
+.lockMid1 {
+    top: 15%
+}
+.lockMid2 {
+    top: 85%
 }
 .lockBottomMid {
     top: 90%;
