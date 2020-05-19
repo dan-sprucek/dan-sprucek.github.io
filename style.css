@@ -267,14 +267,14 @@ h1 {
     display: none;
 }
 /* PROGRAMS */
-#listOfPrograms{
+#listOfPrograms, #listOfBoardGames{
     padding-left: 0;
     list-style-type: none;
 }
-#listOfPrograms li a{
+#listOfPrograms li a, #listOfBoardGames li a{
     border-bottom: 1px solid black;
 }
-#listOfPrograms p {
+#listOfPrograms li p, #listOfBoardGames li p {
     padding-left: 20px;
 }
 /* CUBE */
@@ -598,4 +598,11 @@ h1 {
 
 #resetNotification {
     color: red;
+}
+
+/* BOARD GAMES */
+#listOfBoardGames li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: black;
 }
