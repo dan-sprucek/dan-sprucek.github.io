@@ -98,7 +98,7 @@ p {
 
 /* HEADER IMG AND INTRODUCTION */
 #header {
-    height: 200px;
+    height: 150px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -108,7 +108,7 @@ p {
     position: absolute;
     bottom: 30px;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     font-family: 'Noto Serif', serif;
 }
 #header img {
@@ -211,8 +211,8 @@ h1 {
 /* FIXED CONTACT */
 #contactSide {
     position: fixed;
-    right: 0;
-    bottom: 25%;
+    right: 10px;
+    bottom: calc(100% - 75%);
     width: 30px;
     display: flex;
     flex-direction: column;
@@ -243,6 +243,7 @@ h1 {
 .CVselected {
     background-color: lightseagreen;
 }
+
 /* WORK EXPERIENCE */
 .linking {
     font-size: 1.1em;

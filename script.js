@@ -49,7 +49,11 @@ if (!location.hash){
         if ($(".dropdownContent li a").eq(j).hasClass("activeTab")){
             $(".dropdownContent li a").eq(j).parent().parent().siblings("a").addClass("activeUnderTab");
         };
-    }
+    }   if (location.hash === "#about"){
+        $("#header div").html("Hi! My name is Dan!");
+    }    else {
+            $("#header div").html(" ");
+        };
 };
 
 // OPEN THE WINDOW
@@ -108,6 +112,11 @@ $(window).on("hashchange", function(){
             };
         }
     };
+    if (location.hash === "#about"){
+        $("#header div").html("Hi! My name is Dan!");
+    }    else {
+            $("#header div").html(" ");
+        };
     $(".dropdownContent li a").parent().parent().siblings("a").removeClass("activeUnderTab");
     for (j = 0; j < $(".dropdownContent li a").length; j++){
         if ($(".dropdownContent li a").eq(j).hasClass("activeTab")){
@@ -163,7 +172,8 @@ $("#selectCV div").on("click", function(){
 
 // WORK EXPERIENCE TOGGLE SHOW JOB
 $("#listOfJobs li").on("click", function(){
-    $(this).nextUntil("li").slideToggle(400);
+    $(this).siblings("li").children("p").hide(600);
+    $(this).children("p").delay(100).slideToggle(600);
 });
 
 // CUBE DIFFICULTY
