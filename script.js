@@ -9,7 +9,7 @@ $("#navigationBarList li a").first().css("border-left", "1px solid white");
 
 // DECIDING WHETHER TO USE CURRENT LEARNIGN + RANDOM QUOTE
 $(window).on("load resize", function(){
-    if ($(window).width() < 1020){
+    if ($(window).width() < 1140){
         $("#randomQuote, #currentlyLearning").css("display", "none");
 }   else {
         $("#randomQuote, #currentlyLearning").css("display", "inline");
