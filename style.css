@@ -104,9 +104,16 @@ h1, h2, h3 {
 }
 #animationSkip {
     margin-top: 15px;
-    padding: 5px 5px;
+    padding: 5px;
     background-color: black;
     color: white;
+}
+#animationSkip:hover {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 3px;
+    border: 3px solid lime;
+    content: "SKIP ANIMATION";
 }
 /* HEADER IMG AND INTRODUCTION */
 #header {
@@ -134,6 +141,8 @@ h1, h2, h3 {
     top: -1px;
     font-family: sans-serif;
     border-top: 1px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 #navigationBarList {
     list-style-type: none;
@@ -169,6 +178,10 @@ h1, h2, h3 {
     width: inherit;
     min-width: 150px;
 }
+.dropdownContent:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;    
+}
 .activeTab {
     background-color: green !important;
 }
@@ -201,6 +214,7 @@ h1, h2, h3 {
 .active {
     display: flex;
 }
+
 /* MAIN IMG - LEFT SIDE */
 .mainImage {
     width: 30%;
@@ -212,6 +226,7 @@ h1, h2, h3 {
     margin: auto;
     padding: 5px;
     max-width: 100%;
+    border-radius: 5%;
 }
 /* MAIN CONTENT - RIGHT SIDE */
 .mainContent {
@@ -625,4 +640,28 @@ h1 {
     text-decoration: none;
     font-size: 1.1em;
     color: black;
+}
+
+/* SMALLER SIZE */
+@media (max-width: 700px) {
+    .mainImage {
+        display: none;
+    }
+    .mainContent {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #navigationBarList li a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media (max-height: 400px) {
+    #header {
+        display: none;
+    }
+    #contactSide {
+        display: none;
+    }
 }
