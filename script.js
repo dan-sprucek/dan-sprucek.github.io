@@ -9,7 +9,7 @@ $("#navigationBarList li a").first().css("border-left", "1px solid white");
 
 // DECIDING WHETHER TO USE CURRENT LEARNIGN + RANDOM QUOTE
 $(window).on("load resize", function(){
-    if ($(window).width() < 1140){
+    if ($(window).width() < 1200){
         $("#randomQuote, #currentlyLearning").css("display", "none");
 }   else {
         $("#randomQuote, #currentlyLearning").css("display", "inline");
@@ -55,7 +55,11 @@ if (!location.hash){
             $("#header div").html(" ");
         };
 };
-
+// SKIP OPENNING WINDOW
+$("#animationSkip").on("click", function(){
+    location.href = "#about"
+    $("#welcomex").hide();
+});
 // OPEN THE WINDOW
 $("#welcomex").on("click", function(){
     location.href = "#about"
@@ -171,13 +175,13 @@ $("#selectCV div").on("click", function(){
 });
 
 // WORK EXPERIENCE TOGGLE SHOW JOB
-$("#listOfJobs li").on("click", function(){
-    $(this).siblings("li").children("p").hide(600);
-    $(this).children("p").delay(100).slideToggle(600);
+$("#listOfJobs li span").on("click", function(){
+    $(this).parent().siblings("li").children("p").hide(600);
+    $(this).siblings("p").delay(100).slideToggle(600);
 });
 
 // CUBE DIFFICULTY
-var multiplicator, cubeClickTime = 31000;
+var multiplicator = 1, cubeClickTime = 31000;
 $("#selectDifficulty input").on("click", function(){
     $("#staticCube").css("animation-duration", $(this).val());
     multiplicator = $(this).parent().index() + 1;
@@ -218,7 +222,7 @@ var score, bestScore;
 $("#selectAnswer div input").on("click", function(){
     if ($(this).val() == "correct"){
         $("#selectAnswer").next().html("Your answer is <span>CORRECT</span>! Your final score is <span id='finalScore'></span>");
-        $("#finalScore").html(parseInt($("#cubeCounter").html()) * multiplicator + 10 * multiplicator);
+        $("#finalScore").html(parseInt($("#cubeCounter").html()) * multiplicator + multiplicator * 10);
         score = ($("#finalScore").html());
         bestScore = ($("#bestScore").html());
         if (score > bestScore) {
