@@ -164,13 +164,13 @@ $("#selectCV div").on("click", function(){
         $("#selectCV div").eq(2).toggleClass("CVselected");
     }
     if ($("#selectCV div").eq(0).hasClass("CVselected") && $("#selectCV div").eq(2).hasClass("CVselected")){
-        $("#linkToCV").attr("href", "https://drive.google.com/open?id=1O6i0fCbxdvZg0ZimI4Ok84tAS1nZHaCs");
+        $("#linkToCV").attr("href", "https://drive.google.com/file/d/1mSJgugAqjhvrVk-145dsAI6EL-5pEHIB/view?usp=sharing");
     }   else if ($("#selectCV div").eq(1).hasClass("CVselected") && $("#selectCV div").eq(2).hasClass("CVselected")){
-        $("#linkToCV").attr("href", "https://drive.google.com/open?id=1fH3PKscd9yETH554VBbULMvGtjcpVoxK");
+        $("#linkToCV").attr("href", "https://drive.google.com/file/d/1CHcNKgpe_ugLp2afwjrcyxFUuYh-sF43/view?usp=sharing");
     }   else if ($("#selectCV div").eq(0).hasClass("CVselected") && $("#selectCV div").eq(3).hasClass("CVselected")){
-        $("#linkToCV").attr("href", "https://drive.google.com/open?id=1D8teIo29ZaGMQHtmEPh1goIW4WMpiz9u");
+        $("#linkToCV").attr("href", "https://drive.google.com/file/d/1YxfWRF39WZ06peEJ-qTSHCaSg4P1V-SJ/view?usp=sharing");
     }   else {
-        $("#linkToCV").attr("href", "https://drive.google.com/open?id=1m2Ro_QAXTqfrSieI3THVH-HsTAA_M4Vf");
+        $("#linkToCV").attr("href", "https://drive.google.com/file/d/1Qs8H6U1EwfnhXERTFi0QN8IAwuJjFEhw/view?usp=sharing");
     }
 });
 
