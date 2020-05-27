@@ -209,6 +209,13 @@ $("#staticCube").hover(function(){
     $("#selectAnswer div input").prop("checked", false);
     $("#staticCube").on("click", function(){
         $("#cubeCounter").html(parseInt($("#cubeCounter").html())+1); 
+        $("#cubeCounter").animate({
+            fontSize: "24px"
+        }, 100, function(){
+            $("#cubeCounter").animate({
+                fontSize: "16px"
+            }, 100)
+        });
     });
     cubeTimer = setTimeout(function(){$("#staticCube").off("click");}, cubeClickTime);
 },  function(){
