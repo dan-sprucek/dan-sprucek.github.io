@@ -66,6 +66,8 @@
                 <ul class="dropdownContent">
                     <li><a class="tabs" href="#programs/cube">Cube</a></li>
                     <li><a class="tabs" href="#programs/random">Random Selector</a></li>
+                    <li><a class="tabs" href="#programs/roman">Roman Numerals</a></li>
+                    <li><a class="tabs" href="#programs/cipher">Ceasar Cipher</a></li>
                 </ul>
             </li>
             <li><a class="tabs" href="#hobbies">HOBBIES</a>
@@ -158,12 +160,26 @@
             <h1>Programs</h1>
             <p>I think this website is my greatest achievement so far, but I also created a few little programs and apps since learning the first basics about web development:</p>
             <ul id="listOfPrograms">
-                <li><a href="#programs/cube" class="linking">Cube</a>
-                <p>A first program I wrote - using keywords you have to follow the cube till the end to see the final color and select the right answer. However, while rebuilding the Cube I set in a few more bits so I would personally call it Cube 2.0</p>
-                <p>Now, learning more about jQuery animation I think I would be able to create even nicer version that could be more fun, but I'll leave it to another future app. It's like learning JavaScript and then finding jQuery - a whole new level...</p></li>
-                <li><a href="#programs/random" class="linking">Random Selector</a>
-                <p>This I created for internal use using random function - we often struggle with deciding who to start a game or whose turn is it to do the chores etc.</p>
-                <p>Again, when I built first version of this during my learning with Mike Dane, it was a very simple app. Only after the course with Greenfox Academy I realized the need of extra buttons and functionalities.</p></li>
+                <li>
+                    <a href="#programs/cube" class="linking">Cube</a>
+                    <p>A first program I wrote - using keywords you have to follow the cube till the end to see the final color and select the right answer. However, while rebuilding the Cube I set in a few more bits so I would personally call it Cube 2.0</p>
+                    <p>Now, learning more about jQuery animation I think I would be able to create even nicer version that could be more fun, but I'll leave it to another future app. It's like learning JavaScript and then finding jQuery - a whole new level...</p>
+                </li>
+                <li>
+                    <a href="#programs/random" class="linking">Random Selector</a>
+                    <p>This I created for internal use using random function - we often struggle with deciding who to start a game or whose turn is it to do the chores etc.</p>
+                    <p>Again, when I built first version of this during my learning with Mike Dane, it was a very simple app. Only after the course with Greenfox Academy I realized the need of extra buttons and functionalities.</p>
+                </li>
+                <li>
+                    <a href="#programs/roman" class="linking">Roman Numerals</a>
+                    <p>During freeCodeCamp certifications I've had to do a number of projects, one of which was create an app that would take a latin number and change it to Roman number.</p>
+                    <p>It is not a difficult app and I inted to add a function which takes a Roman number and translates it back to latin.</p>
+                </li>
+                <li>
+                    <a href="#programs/cipher" class="linking">Caesar Cipher</a>
+                    <p>Another of the freeCodeCamp tasks - create a ciphering app. This program takes each letter, moves it in the alphabet by a number of positions and returns the new letter. Fun fact, Julius Caesar used this type of encryption in his private correspondence.</p>
+                    <p>I have also added the option of decipher. Indeed, for deciphering of number 1 you can just use encrypt with the number 25, but who has the time to count the difference every time :)</p>
+                </li>
             </ul>
         </div>
     </div>
@@ -234,6 +250,44 @@
             </div>
         </div>
     </div>
+        <!-- ROMAN NUMBERS -->
+    <div class="mainContainer" id="programs/romanx">
+        <div class="mainImage">
+            <img src="https://image.freepik.com/free-photo/low-angle-greyscale-shot-ancient-roman-temple-bright-sun_181624-4928.jpg" alt="Roman">
+        </div>
+        <div class="mainContent">
+            <h1>Roman Numerals</h1>
+            <p>This very simple app converts your number into Roman numerals.</p>
+            <div id="romanNumeralContainer">
+                <input type="number" step="1" min="1" placeholder="Insert Latin Number" id="latinNumber">
+                </br>                
+                <button id="showRoman">CONVERT</button> 
+                <p id="romanResult">The result is: <span></span></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- CAESAR CIPHER -->
+    <div class="mainContainer" id="programs/cipherx">
+        <div class="mainImage">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Pigpen_cipher_key.svg/1024px-Pigpen_cipher_key.svg.png" alt="Cipher">
+        </div>
+        <div class="mainContent">
+            <h1>Caesar Cipher</h1>
+            <p>Caesar Cipher shifts every letter in the provided text by a number of places and returns a ciphered version.</p>
+            <div id="randomSelectContainer">
+                <textarea rows="4" cols="25" placeholder="Insert text you want to have ciphered" id="cipherText"></textarea>
+                </br>
+                <input value="0" id="cipherNumber" type="number" step="1" min="1" max="25" placeholder="1-25">
+                </br>
+                <button id="cipherStart">CIPHER!</button>
+                <button id="decipherStart">DECIPHER!</button>
+                <p>Ciphered text will appear below:</p>
+                <p id="cipherResult"></p>
+            </div>
+        </div>
+    </div>
+
         <!-- HOBBIES -->
     <div class="mainContainer" id="hobbiesx">
         <div class="mainImage">

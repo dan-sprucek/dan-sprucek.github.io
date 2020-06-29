@@ -289,3 +289,120 @@ $("#resetRandom").on("dblclick", function(){
     $("#resetNotification").hide()
     $("#randomSelectContainer input").val("");
 });
+
+// ROMAN NUMERALS
+$("#showRoman").on("click", function() {
+    $("#romanResult").show();
+    let newNum = [];
+    let changeNum = $("#latinNumber").val();
+    if (changeNum >= 1000) {
+      for (let i = 1000; i <= changeNum; changeNum -= 1000) {
+        newNum.push("M")
+      }
+    }
+    if (changeNum >= 900) {
+      for (let i = 900; i <= changeNum; changeNum -= 900) {
+        newNum.push("CM")
+      }
+    }
+    if (changeNum >= 500) {
+      for (let i = 500; i <= changeNum; changeNum -= 500) {
+        newNum.push("D")
+      }
+    }
+    if (changeNum >= 400) {
+      for (let i = 400; i <= changeNum; changeNum -= 400) {
+        newNum.push("CD")
+      }
+    }
+    if (changeNum >= 100) {
+      for (let i = 100; i <= changeNum; changeNum -= 100) {
+        newNum.push("C")
+      }
+    }
+    if (changeNum >= 90) {
+      for (let i = 90; i <= changeNum; changeNum -= 90) {
+        newNum.push("XC")
+      }
+    }
+    if (changeNum >= 50) {
+      for (let i = 50; i <= changeNum; changeNum -= 50) {
+        newNum.push("L")
+      }
+    }
+    if (changeNum >= 40) {
+      for (let i = 40; i <= changeNum; changeNum -= 40) {
+        newNum.push("XL")
+      }
+    }
+    if (changeNum >= 10) {
+      for (let i = 10; i <= changeNum; changeNum -= 10) {
+        newNum.push("X")
+      }
+    }
+    if (changeNum >= 9) {
+      for (let i = 9; i <= changeNum; changeNum -= 9) {
+        newNum.push("IX")
+      }
+    }
+    if (changeNum >= 5) {
+      for (let i = 5; i <= changeNum; changeNum -= 5) {
+        newNum.push("V")
+      }
+    }
+    if (changeNum >= 4) {
+      for (let i = 4; i <= changeNum; changeNum -= 4) {
+        newNum.push("IV")
+      }
+    }
+    if (changeNum >= 1) {
+      for (let i = 1; i <= changeNum; changeNum -= 1) {
+        newNum.push("I")
+      }
+    }
+    $("#romanResult span").html(newNum.join(""));
+  })
+
+// CAESAR CIPHER
+$("#cipherStart").on("click", function() {
+    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let index = parseInt($("#cipherNumber").val())
+    let newerArr = [];
+    let newArr = $.trim($("#cipherText").val().toUpperCase());
+    newArr
+    .split("")
+    .map(val => {
+      if (alphabet.indexOf(val) < 0) {
+        newerArr.push(val)
+      } else {
+        let newIndex = alphabet.indexOf(val) + index
+        if (newIndex > 25) {
+          newerArr.push(alphabet.charAt(newIndex - 26))
+        } else {
+          newerArr.push(alphabet.charAt(newIndex))
+        }
+      }
+    })
+    $("#cipherResult").html(newerArr.join(""))
+})
+$("#decipherStart").on("click", function() {
+    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let index = parseInt($("#cipherNumber").val())
+    let newerArr = [];
+    let newArr = $.trim($("#cipherText").val().toUpperCase());
+    newArr
+    .split("")
+    .map(val => {
+      if (alphabet.indexOf(val) < 0) {
+        newerArr.push(val)
+      } else {
+        let newIndex = alphabet.indexOf(val) - index
+        if (newIndex < 0) {
+          newerArr.push(alphabet.charAt(newIndex + 26))
+        } else {
+          newerArr.push(alphabet.charAt(newIndex))
+        }
+      }
+    })
+    $("#cipherResult").html(newerArr.join(""))
+})
