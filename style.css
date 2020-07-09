@@ -93,6 +93,7 @@ h1, h2, h3 {
 #openingMid img {
     border-radius: 50%;
     border: 4px dashed grey;
+    width: 200px
 }
 #openingMid p {
     text-align: center;
