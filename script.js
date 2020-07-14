@@ -164,13 +164,13 @@ $("#selectCV div").on("click", function(){
         $("#selectCV div").eq(2).toggleClass("CVselected");
     }
     if ($("#selectCV div").eq(0).hasClass("CVselected") && $("#selectCV div").eq(2).hasClass("CVselected")){
-        $("#linkToCV").attr("href",/* ENGLISH PDF */ "https://drive.google.com/file/d/1bQ1lexX_zfp9gqAYoAbxszF6aExZoCLt/view?usp=sharing");
+        $("#linkToCV").attr("href",/* ENGLISH PDF */ "https://drive.google.com/file/d/1snUt4P_y60f0_GraoDcCb6UwV4nvOCJ5/view?usp=sharing");
     }   else if ($("#selectCV div").eq(1).hasClass("CVselected") && $("#selectCV div").eq(2).hasClass("CVselected")){
-        $("#linkToCV").attr("href",/* CZECH PDF */ "https://drive.google.com/file/d/1UEE4rjHMTY1VAd3cBezigplFv-Iw4-Ph/view?usp=sharing");
+        $("#linkToCV").attr("href",/* CZECH PDF */ "https://drive.google.com/file/d/1DUPrhjdQfmAzccA4piGnr2MziHpEZBit/view?usp=sharing");
     }   else if ($("#selectCV div").eq(0).hasClass("CVselected") && $("#selectCV div").eq(3).hasClass("CVselected")){
-        $("#linkToCV").attr("href",/* ENGLISH DOCX */ "https://drive.google.com/file/d/16S-bC5opxh9M7BmVx6KU05zeqIVT5K2K/view?usp=sharing");
+        $("#linkToCV").attr("href",/* ENGLISH DOCX */ "https://drive.google.com/file/d/10icJz6CnRYl-HlyTN6cBubQUD7BZ-IC0/view?usp=sharing");
     }   else {
-        $("#linkToCV").attr("href",/* CZECH DOCX */ "https://drive.google.com/file/d/1Anu4acUHd9Kd3bN1trxOoiRVWG8gK25K/view?usp=sharing");
+        $("#linkToCV").attr("href",/* CZECH DOCX */ "https://drive.google.com/file/d/1X6MHb9fboNGHn16cWp6LdeT4ujVU__Nb/view?usp=sharing");
     }
 });
 
