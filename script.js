@@ -49,11 +49,7 @@ if (!location.hash){
         if ($(".dropdownContent li a").eq(j).hasClass("activeTab")){
             $(".dropdownContent li a").eq(j).parent().parent().siblings("a").addClass("activeUnderTab");
         };
-    }   if (location.hash === "#about"){
-        $("#header div").html("Hi! My name is Dan!");
-    }    else {
-            $("#header div").html(" ");
-        };
+    };
 };
 // SKIP OPENNING WINDOW
 $("#animationSkip").on("click", function(){
@@ -116,11 +112,6 @@ $(window).on("hashchange", function(){
             };
         }
     };
-    if (location.hash === "#about"){
-        $("#header div").html("Hi! My name is Dan!");
-    }    else {
-            $("#header div").html(" ");
-        };
     $(".dropdownContent li a").parent().parent().siblings("a").removeClass("activeUnderTab");
     for (j = 0; j < $(".dropdownContent li a").length; j++){
         if ($(".dropdownContent li a").eq(j).hasClass("activeTab")){
